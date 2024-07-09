@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:signature="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Proyecto2_2.View.SignaturePage"
+             Title="Capturar Firma">
+    
+    
+        <StackLayout>
+            <!-- Area de la firma-->
+        <signature:SignaturePadView x:Name="signaturePad" StrokeColor="Black" />
+
+            
+        <Entry x:Name="nameEntry" Placeholder="Nombre" />
+        <Entry x:Name="descriptionEntry" Placeholder="Descripcion" />
+
+            <Button Text="Guardar Firma" Clicked="OnSaveSignatureClicked"/>
+            <Button Text="Ver Firmas" Clicked="OnViewSignatureClicked"/>
+
+        </StackLayout>
+   
+</ContentPage>
